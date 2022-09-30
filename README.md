@@ -25,6 +25,8 @@ one click to install Aria2 and extension
 
 若修改下载文件夹、其他配置，后续请自行到配置文件中 手动配置
 
-默认部署在D盘下！！！
+默认部署在D盘下
 
 默认RPC密码为P3TERX
+
+Aria2c、unzip版权均为原作者所有！！！
