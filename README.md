@@ -29,4 +29,4 @@ one click to install Aria2 and extension
 
 默认RPC密码为P3TERX
 
-Aria2c、unzip版权均为原作者所有！！！
+Aria2c、7zip版权均为原作者所有！！！
