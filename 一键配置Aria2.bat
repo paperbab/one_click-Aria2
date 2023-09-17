@@ -16,34 +16,33 @@ echo * 所有选择页面，选项 1 均为默认选项
 echo * 除本页外，其它所有选择页面在倒计时 2 分钟后将自动选择默认选项，本页倒计时等待 5 分钟
 echo * 若修改下载文件夹、其他配置，后续请自行到配置文件中 手动配置
 echo * 默认部署在D盘下！！！
-echo * 默认RPC密码为P3TERX
+echo * 默认RPC密码为12345
 echo ===============================================================================
-echo 请选择要下载的 Aria 版本(下载路径为D:\)：
+echo 请选择要下载的 Aria 版本(路径为D:\aria2)：
 echo 1.Aria2 64bit【默认】
 echo 2.Aria2 32bit
-echo 3.更新Aria2c
 echo ===============================================================================
 choice  /c 12 /n /m "请输入目标选项前的数字：" /d 1 /t 300
-if %errorlevel%==3 (aira2c.exe https://ghproxy.com/https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0-win-32bit-build1.zip & unzip -d D:/ aria2-1.36.0-win-32bit-build1.zip)
-if %errorlevel%==2 (aira2c.exe https://ghproxy.com/https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0-win-32bit-build1.zip & unzip -d D:/ aria2-1.36.0-win-32bit-build1.zip)
-if %errorlevel%==1 (aria2c.exe https://ghproxy.com/https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0-win-64bit-build1.zip & unzip -d D:/ aria2-1.36.0-win-64bit-build1.zip)
+if %errorlevel%==2 (aira2c.exe https://ghproxy.com/https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0-win-32bit-build1.zip & 7z e -oD:/aria2 aria2-1.36.0-win-32bit-build1.zip)
+if %errorlevel%==1 (aria2c.exe https://ghproxy.com/https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0-win-64bit-build1.zip & 7z e -oD:/aria2 aria2-1.36.0-win-64bit-build1.zip)
 cls
 echo ===============================================================================
 echo 选择配置文件
-echo 1.下载推荐配置文件【默认】
-echo 2.下载自带配置文件（需要自己更改配置文件）
+echo 1.下载推荐配置文件【默认，改自P3TERX】
+echo 2.不需要，谢谢
 echo ===============================================================================
 choice  /c 12 /n /m "请输入目标选项前的数字：" /d 1 /t 300
-if %errorlevel%==2 (aria2c.exe https://ghproxy.com/https://github.com/Paperbab/Aria2-Extension/releases/download/partable/aria2.conf.recommended.zip & unzip -d D:/aria2-1.36.0-win-64bit-build1 aria2.conf.recommended.zip)
-if %errorlevel%==1 (aria2c.exe -d D:/aria2-1.36.0-win-64bit-build1 https://jsd.eagleyao.com/gh/Paperbab/Aria2-Extension@main/aria2.conf)
+if %errorlevel%==2 (goto UI)
+if %errorlevel%==1 (aria2c.exe -d D:/aria2 https://ghproxy.com/https://raw.githubusercontent.com/paperbab/one_click-Aria2/main/aria2.conf)
 cls
+:UI
 echo ===============================================================================
 echo 下载UI
 echo 1.AriaNG【默认】
 echo 2.不需要，谢谢
 echo ===============================================================================
 choice  /c 12 /n /m "请输入目标选项前的数字：" /d 1 /t 300
-if %errorlevel%==1 (aria2c.exe https://ghproxy.com/https://github.com/mayswind/AriaNg/releases/download/1.2.4/AriaNg-1.2.4-AllInOne.zip & unzip -d D:/aria2-1.36.0-win-64bit-build1 AriaNG-1.2.4-AllInOne.zip)
+if %errorlevel%==1 (aria2c.exe https://ghproxy.com/https://github.com/mayswind/AriaNg/releases/download/1.2.4/AriaNg-1.2.4-AllInOne.zip & 7z e -oD:/aria2 AriaNG-1.3.6-AllInOne.zip)
 if %errorlevel%==2 (goto tz)
 cls
 :tz
@@ -54,7 +53,7 @@ echo 2.不需要，谢谢
 echo ===============================================================================
 choice  /c 12 /n /m "请输入目标选项前的数字：" /d 1 /t 300
 if %errorlevel%==2 (goto end1)
-if %errorlevel%==1 (aria2c.exe https://ghproxy.com/https://github.com/Paperbab/Aria2-Extension/releases/download/partable/one_click_Aria2.zip & unzip -d D:/aria2-1.36.0-win-64bit-build1 one_click_Aria2.zip)
+if %errorlevel%==1 (aria2c.exe https://ghproxy.com/https://github.com/Paperbab/Aria2-Extension/releases/download/partable/one_click_Aria2.zip & 7z e -oD:/aria2 one_click_Aria2.zip)
 cls
 :end1
 cls
