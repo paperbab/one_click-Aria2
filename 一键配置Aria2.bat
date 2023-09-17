@@ -1,15 +1,15 @@
 @echo off
 :: Paperbab @ Github
 :: download from 
-title Quik_Aria2 v1
-echo 一键部署Aria2 v1
+title Quik_Aria2 v1.1
+echo 一键部署Aria2 v1.1
 echo ===============================================================================
 echo 主要功能：
 echo * 一键下载 Aria2（可选 x86 x64）
 echo * 自带镜像代理
 echo * 图形化界面
 echo * 附加托盘图标等功能
-echo * 可选默认配置文件和推荐配置文件
+echo * 可选下载推荐配置文件
 echo * 更新Aria2c
 echo 使用说明：
 echo * 所有选择页面，选项 1 均为默认选项
@@ -42,7 +42,7 @@ echo 1.AriaNG【默认】
 echo 2.不需要，谢谢
 echo ===============================================================================
 choice  /c 12 /n /m "请输入目标选项前的数字：" /d 1 /t 300
-if %errorlevel%==1 (aria2c.exe https://ghproxy.com/https://github.com/mayswind/AriaNg/releases/download/1.2.4/AriaNg-1.2.4-AllInOne.zip & 7z e -oD:/aria2 AriaNG-1.3.6-AllInOne.zip)
+if %errorlevel%==1 (aria2c.exe https://ghproxy.com/https://github.com/mayswind/AriaNg/releases/download/1.3.6/AriaNg-1.3.6-AllInOne.zip & 7z e -oD:/aria2 AriaNG-1.3.6-AllInOne.zip)
 if %errorlevel%==2 (goto tz)
 cls
 :tz
@@ -53,7 +53,7 @@ echo 2.不需要，谢谢
 echo ===============================================================================
 choice  /c 12 /n /m "请输入目标选项前的数字：" /d 1 /t 300
 if %errorlevel%==2 (goto end1)
-if %errorlevel%==1 (aria2c.exe https://ghproxy.com/https://github.com/Paperbab/Aria2-Extension/releases/download/partable/one_click_Aria2.zip & 7z e -oD:/aria2 one_click_Aria2.zip)
+if %errorlevel%==1 (aria2c.exe https://ghproxy.com/https://github.com/paperbab/one_click-Aria2/releases/download/v1.1/Aria2-Ex.zip & 7z x -oD:/aria2 Aria2-Ex.zip)
 cls
 :end1
 cls
