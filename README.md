@@ -27,6 +27,6 @@ one click to install Aria2 and extension
 
 默认部署在D盘下
 
-默认RPC密码为P3TERX
+默认RPC密码为12345
 
 Aria2c、7zip版权均为原作者所有！！！
