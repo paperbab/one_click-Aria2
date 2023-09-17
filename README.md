@@ -6,6 +6,9 @@ one click to install Aria2 and extension
 
 现在并没有完善，如更新aria2c功能并未完全实现，各位见谅！
 
+## 如何下载
+clone下整个仓库或者在Releases内下载源码，然后双击.bat文件
+
 ## 基本用处
 
 一键下载 Aria2（可选 x86 x64）
@@ -16,7 +19,8 @@ one click to install Aria2 and extension
 
 附加托盘图标等功能
 
-可选默认配置文件和推荐配置文件
+可选下载推荐配置文件  
+
 *更新Aria2c（并未实现！）*
 
 ## 使用说明：
@@ -29,4 +33,7 @@ one click to install Aria2 and extension
 
 默认RPC密码为12345
 
-Aria2c、7zip版权均为原作者所有！！！
+## 感谢
+[Aria2](https://github.com/aria2/aria2)  
+[AriaNG](https://github.com/mayswind/AriaNg)  
+[aria2-conf](https://github.com/P3TERX/aria2.conf)
